@@ -32,8 +32,6 @@ app.post("/chat", async (req, res) => {
   const { message, language } = req.body;
   console.log("Received message:", message, "with language:", language);
 
-  // Placeholder logic (replace later with API)
-  // const botReply = `You said: "${userMessage}"`;
   let openaiReply;
   try {
       openaiReply = await processData(message, language);
