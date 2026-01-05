@@ -101,7 +101,3 @@ pollyglot/
 ## License
 
 This project is licensed under the ISC License.
-
-## Disclaimer
-
-This application uses OpenAI's API. Ensure you have a valid API key and are aware of OpenAI's usage policies and pricing.
