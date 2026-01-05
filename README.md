@@ -62,7 +62,53 @@ Pollyglot is a web-based translation chat application that uses OpenAI's GPT-4 t
 
 ## Deployment
 
-This application is deployed using Docker.
+This application is deployed using Docker. The project includes Docker configuration files for both development and production environments.
+
+### Docker Setup
+
+1. **Prerequisites**: Ensure you have Docker and Docker Compose installed on your system.
+
+2. **Environment Configuration**: Make sure your `.env` file contains the required environment variables:
+   ```
+   OPENAI_API_KEY=your_openai_api_key_here
+   ```
+
+### Development with Docker Compose
+
+For development with hot-reloading and automatic restarts:
+
+```bash
+docker-compose up
+```
+
+This will:
+- Build the Docker image using the `Dockerfile`
+- Start the application with `nodemon` for hot-reloading
+- Map port 3000 from container to host
+- Load environment variables from `.env`
+- Enable development mode (`NODE_ENV=development`)
+
+### Production Deployment
+
+For production deployment:
+
+1. Change the environment in `docker-compose.yml`:
+   ```yaml
+   environment:
+     - NODE_ENV=production
+   command: npm run start
+   ```
+
+2. Run the application:
+   ```bash
+   docker-compose up
+   ```
+
+### Docker Configuration Files
+
+- **`Dockerfile`**: Defines the container image with Node.js 24, installs dependencies, and sets up the application
+- **`docker-compose.yml`**: Orchestrates the application container with proper environment and port mapping
+- **`nodemon.json`**: Configures nodemon for development, watching `server.js`, `views/` directory, and file extensions `.js`, `.ejs`, `.json`
 
 ## Project Structure
 
