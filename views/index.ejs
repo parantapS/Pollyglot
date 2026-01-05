@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pollyglot</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+
+  <div class="chat-container">
+    <div class="banner">
+        <img src="/images/avatar.png" alt="Pollyglot Banner" />
+    </div>
+
+    <!-- Header with image -->
+    <div class="chat-header">
+      <!-- <img src="./images/avatar.png" alt="Chat Avatar" /> -->
+      <h2>Pollyglot</h2>
+    </div>
+
+    <div class="language-bar">
+        <button class="lang-btn active" data-lang="spanish">🇪🇸</button>
+        <button class="lang-btn" data-lang="french">🇫🇷</button>
+        <button class="lang-btn" data-lang="japanese">🇯🇵</button>
+        <button class="lang-btn" data-lang="hi">🇮🇳</button>
+    </div>
+
+    <!-- Messages area -->
+    <div class="chat-messages" id="chatMessages">
+      <div class="message bot">
+        Hello! Please enter your text to be translated.
+      </div>
+    </div>
+
+    <!-- Input -->
+    <form class="chat-input" id="chatForm">
+      <input
+        type="text"
+        id="userInput"
+        placeholder="Type a message..."
+        required
+        autocorrect="on"
+        autocomplete="on"
+        spellcheck="true"
+        />
+      <button type="submit">Send</button>
+    </form>
+  </div>
+  <script src="/js/script.js"></script>
+</body>
+</html>

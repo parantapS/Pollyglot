@@ -1,0 +1,20 @@
+# 
+version: '3.8'
+# 
+services:
+  app:
+    # Build the Docker image from the current directory
+    build: .
+    # Map port 3000 of the host to port 3000 of the container
+    ports:
+      - "3000:3000"
+    # Load environment variables from .env file
+    env_file:
+      - .env
+    environment:
+    # Use development environment for hot-reloading. Change to 'production' for deployment.
+      - NODE_ENV=development
+    # Use the development command to enable hot-reloading. Use npm run start for production
+    command: npm run dev
+    # Use restart policy to keep the container running
+    restart: unless-stopped

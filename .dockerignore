@@ -1,0 +1,28 @@
+# Node / npm
+node_modules
+
+# Environment variables
+.env
+
+# Docker files (optional but clean)
+Dockerfile
+.dockerignore
+docker-compose.yml
+
+# Git
+.git
+.gitignore
+
+# OS files
+.DS_Store
+
+# Editor / IDE
+.vscode
+
+# Logs
+logs
+*.log
+
+# Tests & docs (if not needed in container)
+coverage
+README.md

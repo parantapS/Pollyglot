@@ -1,0 +1,6 @@
+{
+  "watch": ["server.js", "views"],
+  "ext": "js,ejs,json",
+  "ignore": ["node_modules"],
+  "legacyWatch": true
+}
