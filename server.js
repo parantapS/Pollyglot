@@ -34,15 +34,15 @@ app.post("/chat", async (req, res) => {
 
   // Placeholder logic (replace later with API)
   // const botReply = `You said: "${userMessage}"`;
-let openaiReply;
-try {
-    openaiReply = await processData(message, language);
-} catch (openaiErr) {
-    console.log("OpenAI failed:", openaiErr);
-    openaiReply = "Report generation failed. Please try again.";
-}
-  res.json({ reply: openaiReply });
-});
+  let openaiReply;
+  try {
+      openaiReply = await processData(message, language);
+  } catch (openaiErr) {
+      console.log("OpenAI failed:", openaiErr);
+      openaiReply = "Report generation failed. Please try again.";
+  }
+    res.json({ reply: openaiReply });
+  });
 
 // start server
 app.listen(PORT, () => {
